@@ -65,8 +65,8 @@ struct v128 { unsigned int vec[4]; };
 	#ifdef __cplusplus
 		extern "C" {
 	#endif
-		extern  bool logAPIs();
-		extern  bool logUnwinding();
+		extern  bool logAPIs(void);
+		extern  bool logUnwinding(void);
 	#ifdef __cplusplus
 		}
 	#endif
