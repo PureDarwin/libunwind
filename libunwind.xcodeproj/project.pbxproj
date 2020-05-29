@@ -303,7 +303,6 @@
 /* Begin XCBuildConfiguration section */
 		1DEB914F08733D8E0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LIBRARY = "libc++";
@@ -340,7 +339,6 @@
 		};
 		1DEB915008733D8E0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LIBRARY = "libc++";
@@ -375,6 +373,7 @@
 		};
 		F9276F120E6E0B6100B731C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_ALTIVEC_EXTENSIONS = YES;
@@ -394,7 +393,10 @@
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(DEPROOT)/usr/local/include/pthread",
+				);
 				OTHER_CFLAGS = "-fexceptions";
 				OTHER_CPLUSPLUSFLAGS = "-funwind-tables";
 				PRODUCT_NAME = unwind;
@@ -404,6 +406,7 @@
 		};
 		F9276F130E6E0B6100B731C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -420,7 +423,10 @@
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(DEPROOT)/usr/local/include/pthread",
+				);
 				INSTALL_PATH = /usr/local/lib/dyld;
 				OTHER_CFLAGS = "-fexceptions";
 				OTHER_CPLUSPLUSFLAGS = "-funwind-tables";
@@ -452,6 +458,7 @@
 		};
 		F95A3D930DE3A8AA004B72E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				EXECUTABLE_EXTENSION = dylib;
@@ -474,7 +481,10 @@
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(DEPROOT)/usr/local/include/pthread",
+				);
 				INSTALL_PATH = /usr/lib/system;
 				INSTALL_PATH_PREFIX = "$(INSTALL_PATH_PREFIX_$(PLATFORM_NAME))";
 				INSTALL_PATH_PREFIX_iphonesimulator = "$(SDKROOT)";
@@ -502,6 +512,7 @@
 		};
 		F95A3D940DE3A8AA004B72E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CURRENT_PROJECT_VERSION = "$(RC_ProjectSourceVersion)";
@@ -520,7 +531,10 @@
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(DEPROOT)/usr/local/include/pthread",
+				);
 				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/usr/lib/system";
 				INSTALL_PATH_PREFIX = "$(INSTALL_PATH_PREFIX_$(PLATFORM_NAME))";
 				INSTALL_PATH_PREFIX_iphonesimulator = "$(SDKROOT)";
