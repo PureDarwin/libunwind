@@ -84,6 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = darwinbuild.xcconfig; sourceTree = "<group>"; };
 		F903E4D70DC16974007E8D28 /* UnwindLevel1-gcc-ext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "UnwindLevel1-gcc-ext.c"; path = "src/UnwindLevel1-gcc-ext.c"; sourceTree = "<group>"; };
 		F9276F140E6E0B6100B731C9 /* libunwind.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libunwind.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92C4CC60DC0145500EE1253 /* UnwindLevel1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = UnwindLevel1.c; path = src/UnwindLevel1.c; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		08FB7795FE84155DC02AAC07 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */,
 				F9413A530D25D7E100B5EA0C /* AddressSpace.hpp */,
 				F95BE31A0D2EED80007E3672 /* CompactUnwinder.hpp */,
 				F94138D00D1C7AC600B5EA0C /* dwarf2.h */,
@@ -301,6 +303,7 @@
 /* Begin XCBuildConfiguration section */
 		1DEB914F08733D8E0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LIBRARY = "libc++";
@@ -337,6 +340,7 @@
 		};
 		1DEB915008733D8E0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0061CD2481CAED00676B7A /* darwinbuild.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LIBRARY = "libc++";
