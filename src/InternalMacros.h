@@ -74,8 +74,6 @@ struct v128 { unsigned int vec[4]; };
 	#define DEBUG_PRINT_API(msg, ...) do { if ( logAPIs() ) fprintf(stderr,  msg, __VA_ARGS__); } while(0)
 	#define DEBUG_PRINT_UNWINDING(msg, ...) do { if ( logUnwinding() ) fprintf(stderr,  msg, __VA_ARGS__); } while(0)
 	#define DEBUG_PRINT_UNWINDING_TEST logUnwinding()
-	#define INITIALIZE_DEBUG_PRINT_API bool logAPIs() { static bool log = (getenv("LIBUNWIND_PRINT_APIS") != NULL); return log; }
-	#define INITIALIZE_DEBUG_PRINT_UNWINDING bool logUnwinding() { static bool log = (getenv("LIBUNWIND_PRINT_UNWINDING") != NULL); return log; }
 #endif
 
 

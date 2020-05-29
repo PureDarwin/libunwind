@@ -37,9 +37,27 @@
 using namespace libunwind;
 
 
-// setup debug logging hooks
-INITIALIZE_DEBUG_PRINT_API
-INITIALIZE_DEBUG_PRINT_UNWINDING
+bool logAPIs() {
+	static bool log_inited = false;
+	static bool log = false;
+	if (!log_inited) {
+		log = (getenv("LIBUNWIND_PRINT_APIS") != NULL);
+		log_inited = true;
+	}
+
+	return log;
+}
+
+bool logUnwinding() {
+	static bool log_inited = false;
+	static bool log = false;
+	if (!log_inited) {
+		log = (getenv("LIBUNWIND_PRINT_UNWINDING") != NULL);
+		log_inited = true;
+	}
+
+	return log;
+}
 
 
 #if __ppc__ || __i386__ ||  __x86_64__
